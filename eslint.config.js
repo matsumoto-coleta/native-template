@@ -7,7 +7,7 @@ const typescriptParser = require("@typescript-eslint/parser");
 module.exports = defineConfig([
   expoConfig,
   {
-    files: ["**/*.{ts,tsx}"],
+    files: ["**/*.{js,jsx,ts,tsx}"],
     languageOptions: {
       parser: typescriptParser,
       parserOptions: {
