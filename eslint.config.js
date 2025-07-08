@@ -1,11 +1,10 @@
 // https://docs.expo.dev/guides/using-eslint/
-const { defineConfig } = require("eslint/config");
 const expoConfig = require("eslint-config-expo/flat");
 const typescript = require("@typescript-eslint/eslint-plugin");
 const typescriptParser = require("@typescript-eslint/parser");
 
-module.exports = defineConfig([
-  expoConfig,
+module.exports = [
+  ...expoConfig,
   {
     files: ["**/*.{js,jsx,ts,tsx}"],
     languageOptions: {
@@ -57,4 +56,4 @@ module.exports = defineConfig([
   {
     ignores: ["dist/*", "babel.config.js"],
   },
-]);
+];
