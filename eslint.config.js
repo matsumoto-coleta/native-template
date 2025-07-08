@@ -1,13 +1,13 @@
 // https://docs.expo.dev/guides/using-eslint/
-const { defineConfig } = require('eslint/config');
+const { defineConfig } = require("eslint/config");
 const expoConfig = require("eslint-config-expo/flat");
-const typescript = require('@typescript-eslint/eslint-plugin');
-const typescriptParser = require('@typescript-eslint/parser');
+const typescript = require("@typescript-eslint/eslint-plugin");
+const typescriptParser = require("@typescript-eslint/parser");
 
 module.exports = defineConfig([
   expoConfig,
   {
-    files: ['**/*.{ts,tsx}'],
+    files: ["**/*.{ts,tsx}"],
     languageOptions: {
       parser: typescriptParser,
       parserOptions: {
@@ -15,7 +15,7 @@ module.exports = defineConfig([
       },
     },
     plugins: {
-      '@typescript-eslint': typescript,
+      "@typescript-eslint": typescript,
     },
     rules: {
       // @see https://typescript-eslint.io/rules/array-type
@@ -34,7 +34,10 @@ module.exports = defineConfig([
       ],
 
       // @see https://typescript-eslint.io/rules/no-unused-vars/
-      "@typescript-eslint/no-unused-vars": ["warn", { argsIgnorePattern: "^_" }],
+      "@typescript-eslint/no-unused-vars": [
+        "warn",
+        { argsIgnorePattern: "^_" },
+      ],
 
       // @see https://typescript-eslint.io/rules/require-await/
       "@typescript-eslint/require-await": "off",
@@ -53,5 +56,5 @@ module.exports = defineConfig([
   },
   {
     ignores: ["dist/*", "babel.config.js"],
-  }
+  },
 ]);
