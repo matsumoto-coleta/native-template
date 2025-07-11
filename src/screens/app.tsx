@@ -2,7 +2,6 @@ import { type FC } from "react";
 import {
   Image,
   StyleSheet,
-  Text,
   View,
   type ImageSourcePropType,
 } from "react-native";
